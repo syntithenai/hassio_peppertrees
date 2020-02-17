@@ -1,0 +1,73 @@
+  device_power_usage:
+    name: Device Power Usage
+    entities:
+      - sensor.pool_pump_power
+      - sensor.bedroom_tv_power
+      - sensor.washing_machine_power
+      - sensor.portable_1_power
+      - sensor.bike_charger_power
+      - sensor.file_server_power
+      - sensor.swimming_machine_power
+      - sensor.fridge_power
+      - sensor.lounge_tv_power
+      - sensor.stereo_power
+  device_daily_energy:
+    name: Device Power Usage
+    entities:
+      - sensor.pool_pump_daily_energy
+      - sensor.bedroom_tv_daily_energy
+      - sensor.washing_machine_daily_energy
+      - sensor.portable_1_daily_energy
+      - sensor.bike_charger_daily_energy
+      - sensor.file_server_daily_energy
+      - sensor.swimming_machine_daily_energy
+      - sensor.fridge_daily_energy
+      - sensor.lounge_tv_daily_energy
+      - sensor.stereo_daily_energy
+      
+  device_switches:
+    name: Device Switches
+    entities:
+      - switch.pool_pump
+      - switch.bedroom_tv
+      - switch.washing_machine
+      - switch.portable_1
+      - switch.bike_charger
+      - switch.file_server
+      - switch.swimming_machine
+      - switch.fridge
+      - switch.lounge_tv
+      - switch.stereo  
+      
+  light_switches:
+    name: Light Switches
+    entities:
+      - light.office_light
+      - light.bedroom_light_3
+      - light.porch_light
+      - light.porch_light_2
+      - light.kitchen_light
+      - light.dining_room_light
+      - light.lounge_room_light
+      - light.hall_light
+      - light.toilet_light
+      - light.front_light
+      - light.pantry_light
+      - light.bathroom_light
+      
+      
+  power_costs:
+    name: Power Costs
+    entities:
+      - sensor.hourly_grid_power_sold
+      - sensor.hourly_grid_power_purchased
+      - sensor.hourly_grid_power_saved
+      - sensor.daily_grid_power_sold
+      - sensor.daily_grid_power_purchased
+      - sensor.daily_grid_power_saved
+      - sensor.monthly_grid_power_sold
+      - sensor.monthly_grid_power_purchased
+      - sensor.monthly_grid_power_saved
+      - sensor.yearly_grid_power_sold
+      - sensor.yearly_grid_power_purchased
+      - sensor.yearly_grid_power_saved

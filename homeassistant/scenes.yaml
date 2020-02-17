@@ -1,0 +1,68 @@
+  - name: Office Online
+    entities:
+      light.office_light: on
+      switch.file_server: on
+  - name: Office Offline
+    entities:
+      light.office_light: off
+      switch.file_server: off
+  - name: Lights Out
+    entities:
+      light.office_light: off
+      light.bedroom_light_3: off
+      light.front_light: off
+      light.lounge_light: off
+      light.kitchen_light: off
+      light.hall_light: off
+      light.toilet_light: off
+      light.bathroom_light: off
+      light.dining_room_light: off
+      light.porch_light: off
+      light.porch_light_2: off
+      light.pantry_light: off
+  - name: All The Lights
+    entities:
+      light.office_light: on
+      light.bedroom_light_3: on
+      light.front_light: on
+      light.lounge_light: on
+      light.kitchen_light: on
+      light.hall_light: on
+      light.toilet_light: on 
+      light.bathroom_light: on
+      light.dining_room_light: on
+      light.porch_light: on
+      light.porch_light_2: on
+      light.pantry_light: on
+  - name: Path To the Toilet
+    entities:
+      #light.bedroom_light_3: on
+      light.kitchen_light: on
+      light.hall_light: on
+      light.toilet_light: on
+  - name: Lounge Room
+    entities:
+      light.lounge_light: on
+      light.kitchen_light: on
+      light.dining_room_light: on
+  - name: Lounge Room Lights Out
+    entities:
+      light.lounge_light: off
+      light.kitchen_light: off
+      light.dining_room_light: off
+  - name: Porch Lights
+    entities:
+      light.porch_light: on
+      light.porch_light_2: on
+  - name: Porch Lights Out
+    entities:
+      light.porch_light: off
+      light.porch_light_2: off
+  - name: Front Lights
+    entities:
+      light.front_light: on
+      light.front_light_2: on
+  - name: Front Lights Out
+    entities:
+      light.front_light: off
+      light.front_light_2: off
