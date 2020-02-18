@@ -1,7 +1,7 @@
 # KOGAN POWER PLUG
 substitutions:
-  devicename: washing_machine
-  label: Washing Machine
+  devicename: jug
+  label: Jug
 
 esphome:
   name: $devicename
@@ -10,14 +10,14 @@ esphome:
 
 wifi:
   networks:
- # - ssid: "HOUSE"
-#    password: Welcome2
-#    priority: 2
+  - ssid: "HOUSE"
+    password: Welcome2
+    priority: 2
   - ssid: "PEPPERTREES"
     password: Welcome2
     priority: 1
- # use_address: 192.168.2.92
-
+  use_address: 192.168.2.94
+ 
 # Enable logging
 logger:
 
@@ -49,14 +49,14 @@ switch:
     pin:
       number: GPIO13
       inverted: true
-    restore_mode: ALWAYS_ON
+    restore_mode: ALWAYS_OFF
 
   - platform: gpio
     name: ${label} 
     pin: GPIO14
     id: relay
     icon: mdi:television
-    restore_mode: ALWAYS_ON
+    restore_mode: ALWAYS_OFF
 
 sensor:
   - platform: hlw8012
