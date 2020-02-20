@@ -1,3 +1,254 @@
+- id: '15812546956749999'
+  alias: light timeout office light
+  description: ''
+  trigger:
+  - entity_id: light.office_light
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1aa1ea39ec5f4b4db38f94e0f149b199
+    domain: light
+    entity_id: light.office_light
+    type: turn_off
+- id: '15812546956749999'
+  alias: light timeout bedside light
+  description: ''
+  trigger:
+  - entity_id: light.bedside_light
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b199
+    domain: light
+    entity_id: light.bedside_light
+    type: turn_off
+- id: '15812546956669999'
+  alias: light timeout kitchen light
+  description: ''
+  trigger:
+  - entity_id: light.kitchen_light
+    for: 00:20:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b193
+    domain: light
+    entity_id: light.kitchen_light
+    type: turn_off
+- id: '15812526956669999'
+  alias: light timeout kitchen light 2
+  description: ''
+  trigger:
+  - entity_id: light.kitchen_light_2
+    for: 00:20:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b493
+    domain: light
+    entity_id: light.kitchen_light_2
+    type: turn_off
+- id: '15812546956659999'
+  alias: light timeout pantry light
+  description: ''
+  trigger:
+  - entity_id: light.pantry_light
+    for: 00:02:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b192
+    domain: light
+    entity_id: light.pantry_light
+    type: turn_off
+- id: '15812546956699999'
+  alias: light timeout dining_room light
+  description: ''
+  trigger:
+  - entity_id: light.dining_room_light
+    for: 00:20:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b196
+    domain: light
+    entity_id: light.dining_room_light
+    type: turn_off
+- id: '15812546956699997'
+  alias: light timeout lounge light
+  description: ''
+  trigger:
+  - entity_id: light.lounge_room_light
+    for: 00:30:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b194
+    domain: light
+    entity_id: light.lounge_room_light
+    type: turn_off
+- id: '158125146956679999'
+  alias: light timeout lounge room light 2
+  description: ''
+  trigger:
+  - entity_id: light.lounge_room_light_2
+    for: 00:30:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec2f4b4db38f94e0f149b194
+    domain: light
+    entity_id: light.lounge_room_light_2
+    type: turn_off
+- id: '15781251469562679999'
+  alias: light timeout alcove light
+  description: ''
+  trigger:
+  - entity_id: light.alcove_light
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea989ec2f4b4db3ee8f94e0f149b194
+    domain: light
+    entity_id: light.alcove_light
+    type: turn_off
+- id: '1581251469566739999'
+  alias: light timeout piano light
+  description: ''
+  trigger:
+  - entity_id: light.piano_light
+    for: 00:30:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec2f4b4deee38f94e0f149b194
+    domain: light
+    entity_id: light.piano_light
+    type: turn_off
+- id: '15812546956719999'
+  alias: light timeout hall light
+  description: ''
+  trigger:
+  - entity_id: light.hall_light
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b200
+    domain: light
+    entity_id: light.hall_light
+    type: turn_off
+- id: '15812546956689999'
+  alias: light timeout bathroom light
+  description: ''
+  trigger:
+  - entity_id: light.bathroom_light
+    for: 00:15:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b195
+    domain: light
+    entity_id: light.bathroom_light
+    type: turn_off
+- id: '15812546956649999'
+  alias: light timeout toilet light
+  description: ''
+  trigger:
+  - entity_id: light.toilet_light
+    for: 00:10:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b191
+    domain: light
+    entity_id: light.toilet_light
+    type: turn_off
+- id: '15812546956709999'
+  alias: light timeout front light
+  description: ''
+  trigger:
+  - entity_id: light.front_light
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b197
+    domain: light
+    entity_id: light.front_light
+    type: turn_off
+- id: '15812546956729999'
+  alias: light timeout porch light
+  description: ''
+  trigger:
+  - entity_id: light.porch_light
+    for: 00:30:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b198
+    domain: light
+    entity_id: light.porch_light
+    type: turn_off
+- id: '15812546956739999'
+  alias: light timeout porch light 2
+  description: ''
+  trigger:
+  - entity_id: light.porch_light_2
+    for: 00:30:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b199
+    domain: light
+    entity_id: light.porch_light_2
+    type: turn_off
+- id: '15812546956759999'
+  alias: light timeout bedroom light
+  description: ''
+  trigger:
+  - entity_id: light.bedroom_light_3
+    for: 00:05:00
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
 - id: '1574607676290'
   alias: turn on the pool pump at sunrise
   description: ''
@@ -15,7 +266,7 @@
   description: ''
   trigger:
   - event: sunset
-    offset: -04:00
+    offset: -02:00
     platform: sun
   condition: []
   action:
@@ -67,7 +318,7 @@
   description: ''
   trigger:
   - entity_id: switch.water_switch_1
-    for: 0:30:00
+    for: 01:00:00
     from: 'off'
     platform: state
     to: 'on'
@@ -97,188 +348,8 @@
     platform: numeric_state
   condition: []
   action:
-  - entity_id: switch.pool_pump
+  - entity_id: lkjhlkjh.iuuu
     service: switch.turn_off
-- id: '1581254695664'
-  alias: turn off the toilet light
-  description: ''
-  trigger:
-  - entity_id: light.toilet_light
-    for: 00:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b191
-    domain: light
-    entity_id: light.toilet_light
-    type: turn_off
-- id: '1581254695665'
-  alias: turn off the pantry light
-  description: ''
-  trigger:
-  - entity_id: light.pantry_light
-    for: 00:02:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b192
-    domain: light
-    entity_id: light.pantry_light
-    type: turn_off
-- id: '1581254695666'
-  alias: turn off the kitchen light
-  description: ''
-  trigger:
-  - entity_id: light.kitchen_light
-    for: 00:20:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b193
-    domain: light
-    entity_id: light.kitchen_light
-    type: turn_off
-- id: '1581254695667'
-  alias: turn off the lounge light
-  description: ''
-  trigger:
-  - entity_id: light.lounge_light
-    for: 00:30:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b194
-    domain: light
-    entity_id: light.lounge_light
-    type: turn_off
-- id: '1581254695668'
-  alias: turn off the bathroom light
-  description: ''
-  trigger:
-  - entity_id: light.bathroom_light
-    for: 00:15:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b195
-    domain: light
-    entity_id: light.bathroom_light
-    type: turn_off
-- id: '1581254695669'
-  alias: turn off the dining_room light
-  description: ''
-  trigger:
-  - entity_id: light.dining_room_light
-    for: 00:20:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b196
-    domain: light
-    entity_id: light.dining_room_light
-    type: turn_off
-- id: '1581254695670'
-  alias: turn off the front light
-  description: ''
-  trigger:
-  - entity_id: light.front_light
-    for: 00:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b197
-    domain: light
-    entity_id: light.front_light
-    type: turn_off
-- id: '1581254695671'
-  alias: turn off the hall light
-  description: ''
-  trigger:
-  - entity_id: light.hall_light
-    for: 00:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b200
-    domain: light
-    entity_id: light.hall_light
-    type: turn_off
-- id: '1581254695672'
-  alias: turn off the porch light
-  description: ''
-  trigger:
-  - entity_id: light.porch_light
-    for: 00:30:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b198
-    domain: light
-    entity_id: light.porch_light
-    type: turn_off
-- id: '1581254695673'
-  alias: turn off the porch light 2
-  description: ''
-  trigger:
-  - entity_id: light.porch_light_2
-    for: 00:30:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b199
-    domain: light
-    entity_id: light.porch_light_2
-    type: turn_off
-- id: '1581254695675'
-  alias: turn off the bedroom light
-  description: ''
-  trigger:
-  - entity_id: light.bedroom_light_3
-    for: 00:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b199
-    domain: light
-    entity_id: light.bedroom_light_3
-    type: turn_off
-- id: '1581254695674'
-  alias: turn off the office light
-  description: ''
-  trigger:
-  - entity_id: light.office_light
-    for: 00:05:00
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - device_id: 1ae1ea39ec5f4b4db38f94e0f149b199
-    domain: light
-    entity_id: light.office_light
-    type: turn_off
 - id: '1581932867611'
   alias: turn off the swimming machine if not active
   description: ''

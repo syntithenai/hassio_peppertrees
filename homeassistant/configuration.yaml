@@ -11,19 +11,23 @@ zone: !include zones.yml
 # Activate the configuration editor
 config:
 
+recorder:
+# mysql://user:pass@192.168.1.2/homeassistant?charset=utf8
+  db_url: !secret mysqlconnection
+
 scene: !include scenes.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
 http:
-  base_url: 192.168.1.2:8123
+  #base_url: 192.168.1.2:8123
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
   # Secrets are defined in the file secrets.yaml
   #api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+  base_url: peppertrees.duckdns.org:8123
   ip_ban_enabled: False
 #  login_attempts_threshold: 3
 
@@ -130,15 +134,40 @@ binary_sensor:
     
     
 sensor:
+  - platform: bom_forecast
+    product_id: IDN11118
+    name: Bega
+    forecast_days: 6
+    rest_of_today: True
+    friendly: True
+    friendly_state_format: >-
+      {min}-{max} {summary}.  
+      Rain {chance_of_rain} of {possible_rainfall} 
+      
+    monitored_conditions:
+      - 'max'
+      - 'min'
+      - 'chance_of_rain'
+      - 'possible_rainfall'
+      - 'summary'
 
+#  - platform: fitbit
+##    clock_format: 12H
+#    monitored_resources:
+#      - "activities/steps"
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'      
 # INVERTER MONITORING
   - platform: sma
     host: 192.168.1.215
     ssl: true
     group: installer
     verify_ssl: false
-    scan_interval: 10
-    password: Pyramid1
+    scan_interval: 60
+    password: !secret ysmapassword
     sensors:
       - pv_power
       - pv_gen_meter
@@ -261,6 +290,14 @@ sensor:
       ######################
       # TOTAL POWER USED (kWh)
       
+      
+      total_solar_used:
+        friendly_name: 'Total Solar Power Used'
+        unit_of_measurement: "kWh"
+        value_template: "{{ (states.sensor.total_yield.state | float  - states.sensor.grid_total_yield.state | float)  | float  | round(2) }}"
+      
+      
+    
       # power used as sum of devices
       device_total_energy_today:
         friendly_name: 'Total Device Energy Today'
@@ -374,6 +411,23 @@ sensor:
     type: time
     start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
     end: '{{ now() }}'
+    
+  - platform: history_stats
+    name: Taras TV ON today
+    entity_id: switch.taras_tv
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+    
+  - platform: history_stats
+    name: Lounge TV ON today
+    entity_id: switch.lounge_tv
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+        
     
   - platform: history_stats
     name: swimming_machine_use
